@@ -39,4 +39,4 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
 
 ### Acknowledgements
-Thanks to support from a 2019 Microsoft AI for Earth grant, Global Cool Cities Alliance (GCCA), City of Los Angeles, George Ban-Weiss from University of Southern California, Sika AG and Federal Highway Administration pavement data team.
+Thanks to support from a 2019 Microsoft AI for Earth grant, Global Cool Cities Alliance (GCCA), City of Los Angeles, George Ban-Weiss from University of Southern California, Sika AG, Federal Highway Administration Albedo Study, James E Alleman and Michael Heitzman.
