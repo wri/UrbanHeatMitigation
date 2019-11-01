@@ -35,3 +35,4 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 * The mean and standard deviation of the mean band values for each rooftop are calculated and used to normalize the prediction data. The normalization is done separately for each study area and each time period. For example, while normalizing the 2009 prediction data for LA, the mean band values from 2009 LA imagery is only used. 
 8.	The model trained in step 5 is used to make prediction on the normalized mean band values associated with each roof in the prediction data. This step is done in Azure Machine Learning Studio. 
 
+![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
