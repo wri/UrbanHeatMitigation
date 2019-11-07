@@ -12,6 +12,18 @@ The workflow is compressed within a set of Jupyter notebooks. The step by step i
 All listed notebooks are written for Python 3.6. The libraries and packages required to execute the notebooks are listed in the imports block at the beginning of each. In general, these are standard geospatial and data analysis Python libraries.
 Several parts of the workflow utilize the `descarteslabs` package for imagery retreival or geospatial tiling. This is the Python API provided by Descartes Labs that provides access to its "data refinery" capabilities. Utilizing the API requires registration and token generation, as described in their documentation. Unaffiliated users may not have access to all offerings, such as certain remote sensing products. 
 
+### Inputs:
+#### Training/validation: 
+•	measured or known albedo values of specific materials/sites at specific times. We collected roof and pavement albedo measurements from roof manufactures installers and researchers. Currently we have known albedo values associated with specific measurement or installation dates for over 30,000 unique roofs or pavement location in approximately 45 US states. However, most of the roof samples were associated with high albedo values and there were very small number of samples with low albedo values. So, we employed two techniques to cover up the lack of training data: pixel sampling, SMOTE. Rather than using all the pixels within a roof or street, we selected 20 random pixels as input. This gave us the opportunity to select multiple sample of 20 pixels from underrepresented cases. SMOTE (Synthetic Minority Oversampling Technique) is a method in Azure Machine Learning Studio (classic) to increase the number of minority cases in a dataset used for machine learning. This statistical technique helped us to create new samples with a range of albedo values for which we had no data before. Overall, 283 roof samples were used as input for the roofs model and 2294 pavement samples were used as input for the pavement model. The samples were selected in a way to have a more diverse and balanced training data. 
+•	geometries of training site/material. Microsoft footprint data was used as the main source of geometries for the roofs training data. For pavement, Google Direction API was used to get the centerline of the streets. The centerline was then buffered 2m in each side to get the geometry of the streets.
+•	high-resolution four-band imagery of training sites from within 6-months of site measurement. National Agriculture Imagery Program (NAIP) was used as the source of imagery which has 1m resolution.
+#### Prediction: 
+•	geometries of features of interest (building footprints for roofs, street segment centerlines for streets, etc.). For roofs, official building footprints from LA city government was used for LA and Microsoft footprint data was used to acquire roof geometries for other cities. For streets, official street centerline from LA city government was used for LA and OSM street data was used for other cities. 
+•	high-resolution four-band imagery for features of interest for times of interest. NAIP was used as the primary source of imagery but the model was also tested on Airbus Pleiades imagery. The initial results on Airbus imagery was also very promising.
+
+### Outputs:
+•	Vector dataset with estimated mean reflectivity (unitless albedo, 0-1) for each feature of interest (roof, street segment, etc.) for each time of interest. Possibility to also produce a raster version of this dataset--estimating the reflectivity at each pixel. 
+
 ### Workflow:
 1.	Geocode addresses from the ground truth data
 * Notebook core_geocode-ground-truth.ipynb
