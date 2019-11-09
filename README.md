@@ -25,7 +25,7 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 * Vector dataset with estimated mean reflectivity (unitless albedo, 0-1) for each feature of interest (roof, street segment, etc.) for each time of interest. Possibility to also produce a raster version of this dataset--estimating the reflectivity at each pixel. 
 
 ### Workflow:
-1.	Geocode addresses from the ground truth data
+1.	Geocode addresses from the ground truth data for roofs
 * Notebook core_geocode-ground-truth.ipynb
 * Geocode the training data rooftop addresses using Google geocoding API. The latitude & longitude of the roofs will be used to search for their geometries from Microsoft footprints data.
     
