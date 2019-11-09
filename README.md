@@ -28,6 +28,7 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 1.	Geocode addresses from the ground truth data
 * Notebook core_geocode-ground-truth.ipynb
 * Geocode the training data rooftop addresses using Google geocoding API. The latitude & longitude of the roofs will be used to search for their geometries from Microsoft footprints data.
+    
     Geocode addresses from the ground truth data for streets
 *	Notebook core_geocode-ground-truth_streets.ipynb
 *	Geocode the training data street addresses using Google Directions API to get an encoded polyline string for the street. The polyline string is then decoded to get a list of lat/lon pairs which are then connected to get the shape of the street. 
