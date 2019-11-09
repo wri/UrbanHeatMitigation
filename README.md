@@ -27,13 +27,17 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 ### Workflow:
 1.	Geocode addresses from the ground truth data
 * Notebook core_geocode-ground-truth.ipynb
-* Geocode the training data rooftop addresses using Google geocoding API. The latitude & longitude of the roofs will be used to search for their geometries from Microsoft footprints data.  
+* Geocode the training data rooftop addresses using Google geocoding API. The latitude & longitude of the roofs will be used to search for their geometries from Microsoft footprints data.
+    Geocode addresses from the ground truth data for streets
+*	Notebook core_geocode-ground-truth_streets.ipynb
+*	Geocode the training data street addresses using Google Directions API to get an encoded polyline string for the street. The polyline string is then decoded to get a list of lat/lon pairs which are then connected to get the shape of the street. 
+
 2.	Download NAIP imagery for training data
 * Notebook core_download_imagery.ipynb
 * Specify the desired satellite imagery—from where, from when, including what spectral bands—and store it locally as multi-band, geospatial raster files. 
 3.	Prepare training data
 * Notebook core_process_training_data.ipynb
-* Albedo of each roof is first calculated using band values from all the pixels within a roof and utilizing an equation from Ban-Weiss et al. This calculated albedo is then used to draw the histogram for all pixels within the roof. The pixels are then grouped based on the calculated albedo values and using natural breaks. The expected albedo value for the particular roof is then used to find the optimum group of pixels. The algorithm searches for the group of pixel that contains the expected albedo value and then it checks whether that group of pixel contains at least 20% of total pixels. If both conditions are satisfied, that group of pixels are selected for future analysis. If not, the algorithm searches for the closest group of pixels. The search goes on until both conditions are met. From the final selection of pixels, 20 random pixels are selected for the ultimate analysis. Due to the low amount of data for low albedo roofs, multiple samples of 20 pixels are taken from roofs with low expected albedo. The band values from the selected pixels will be used as an input for the model.
+* Albedo of each feature(roof/streets) is first calculated using band values from all the pixels within a feature and utilizing an equation from Ban-Weiss et al. This calculated albedo is then used to draw the histogram for all pixels within the feature. The pixels are then grouped based on the calculated albedo values and using natural breaks. The expected albedo value for the feature is then used to find the optimum group of pixels. The algorithm searches for the group of pixels that contains the expected albedo value and then it checks whether that group of pixel contains at least 20% of total pixels. If both conditions are satisfied, that group of pixels are selected for future analysis. If not, the algorithm searches for the closest group of pixels. The search goes on until both conditions are met. From the final selection of pixels, 20 random pixels are selected for the ultimate analysis. Due to the low amount of data for low albedo roofs, multiple samples of 20 pixels are taken from roofs with low expected albedo. The band values from the selected pixels will be used as an input for the model.
 4.	Normalize training data
 * Notebook core_normalize-training_data.ipynb
 * The mean and standard deviation of the band values for each pixel in each satellite imagery within the training data AOI are calculated and used to normalize the training data. This final normalized set of band values will be eventually used to train the model.
