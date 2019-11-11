@@ -55,13 +55,13 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 ### Results:
 #### Model accuracy and precision scores:
 Validation score for the model: Before training, the data was split into a 70:30 ratio. 70% data was used for training and the remaining 30% was reserved for validation.
-mean absolute error from validation set: 0.010152
-root mean squared error from validation set: 0.013993
-coefficient of determination from validation set: 0.997422
+* mean absolute error from validation set: 0.010152
+* root mean squared error from validation set: 0.013993
+* coefficient of determination from validation set: 0.997422
 
 Average precision scores: For buildings present in multiple images we were able to produce multiple predictions. The duplicate predictions were used to estimate the precision error of the albedo values. The scores from multiple years were averaged to get an overall precision score.
-mean absolute error from duplicate predictions: 0.0034
-root mean squared error from duplicate predictions: 0.0322
+* mean absolute error from duplicate predictions: 0.0034
+* root mean squared error from duplicate predictions: 0.0322
 
 ### Sample final output of albedo map
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
