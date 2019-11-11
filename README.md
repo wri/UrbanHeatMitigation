@@ -66,5 +66,14 @@ Average precision scores: For buildings present in multiple images we were able 
 ### Sample final output of albedo map
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
 
+### Limitations:
+* Lack of training data especially for roofs with low measured albedo.
+
+### Future Work:
+* Predictions for additional geographies
+* Collect more training data
+* Refine scene normalization process
+
+
 ### Acknowledgements
 Thanks to support from a 2019 Microsoft AI for Earth grant, Global Cool Cities Alliance (GCCA), City of Los Angeles, George Ban-Weiss from University of Southern California, Sika AG, Federal Highway Administration Albedo Study, James E Alleman and Michael Heitzman.
