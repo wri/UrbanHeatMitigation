@@ -65,6 +65,11 @@ Average precision scores: For buildings present in multiple images we were able 
 * mean absolute error from duplicate predictions: 0.0034
 * root mean squared error from duplicate predictions: 0.0322
 
+#### Comparison to Ban-Weiss prediction:
+Visual comparison:
+![Ban-Weiss prediction for LA city 2009:](https://github.com/wri/UrbanHeatMitigation/blob/master/Ban-Weiss%20prediction%20for%20LA%20city%202009.png)
+![WRI prediction for LA city 2009:](https://github.com/wri/UrbanHeatMitigation/blob/master/WRI%20prediction%20for%20LA%20city%202009.png)
+
 ### Sample final output of albedo map
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
 
