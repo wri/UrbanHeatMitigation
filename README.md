@@ -67,17 +67,41 @@ Average precision scores: For buildings present in multiple images we were able 
 
 #### Comparison to Ban-Weiss prediction:
 Visual comparison:
+
 Ban-Weiss prediction for LA city 2009:
 ![Ban-Weiss prediction for LA city 2009:](https://github.com/wri/UrbanHeatMitigation/blob/master/Ban-Weiss%20prediction%20for%20LA%20city%202009.png)
 
 WRI prediction for LA city 2009:
 ![WRI prediction for LA city 2009:](https://github.com/wri/UrbanHeatMitigation/blob/master/WRI%20prediction%20for%20LA%20city%202009.png)
 
+#### Analytical comparison:
+We computed roof by roof comparison scores to compare our prediction to the prediction from Ban-Weiss. For this analysis, we made a spatial join between the two prediction dataset. This allowed us to measure the difference in albedo prediction for each roof. The scores are:  
+Mean absolute error: 0.039
+Root mean squared error: 0.066
+We also computed the relative accuracy between our prediction and the prediction from Ban Weiss. The plot below represents the order of predictions, with Ban Weiss prediction in the x-axis and our prediction in the y-axis.
+
+![RelativeAccuracy](https://github.com/wri/UrbanHeatMitigation/blob/master/RelativeAccuracy_BanWeiss-WRI.png)
+
+The figure suggests that overall there is a similar trend between the two predictions. However, some of the roofs with low albedo prediction from Ban Weiss changes to high albedo in our result which is also evident from the two histograms.
+
+#### Year to Year comparison:
+The change in albedo between multiple years is an important factor to check the validity of the predictions. Assuming that average albedo of a city doesn’t change significantly over a 2-5 year period, we expect a consistent predictions from year to year. So, we measured the difference in albedo prediction for each roof in multiple time periods to track it’s change of over time. Here is an example histogram displaying change in albedo between 2009 and 2012: 
+
+![histogram_change_2009-12](https://github.com/wri/UrbanHeatMitigation/blob/master/histogram_change_2009-12.png)
+
+The mean change looks to be approximately 0. One standard deviation is about 0.09. Nearly 75 thousand roofs had no essentially no change over the 3-year time period. 
+We also wanted to get an idea about how roofs with certain albedo values are changing over time. So, we created a scatterplot to see how roofs in each albedo range changed between 2009 and 2012. 
+
+![scatter_change_2009-12](https://github.com/wri/UrbanHeatMitigation/blob/master/scatter_change_2009-12.png)
+
+The scatterplot shows that the roofs with low albedo predictions (between 0 and 0.3) were more consistent over time. There was a decrease in predicted albedo from 2009 to 2012 for high albedo roofs.
+
 ### Sample final output of albedo map
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
 
 ### Limitations:
 * Lack of training data especially for roofs with low measured albedo.
+* One of the main challenges in this project was to find a correct method to normalize the imagery from year to year. Our current normalization process has produced much improved result but there are still areas of improvement. 
 
 ### Future Work:
 * Predictions for additional geographies
