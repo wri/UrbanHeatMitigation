@@ -76,9 +76,8 @@ WRI prediction for LA city 2009:
 
 #### Analytical comparison:
 We computed roof by roof comparison scores to compare our prediction to the prediction from Ban-Weiss. For this analysis, we made a spatial join between the two prediction dataset. This allowed us to measure the difference in albedo prediction for each roof. The scores are:  
-Mean absolute error: 0.039
-
-Root mean squared error: 0.066
+* Mean absolute error: 0.039
+* Root mean squared error: 0.066
 
 We also computed the relative accuracy between our prediction and the prediction from Ban Weiss. The plot below represents the order of predictions, with Ban Weiss prediction in the x-axis and our prediction in the y-axis.
 
