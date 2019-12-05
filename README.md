@@ -100,15 +100,26 @@ The scatterplot shows that the roofs with low albedo predictions (between 0 and 
 ### Sample final output of albedo map
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
 
-### Limitations:
+### Uses and Limitations:
+The methods and models presented here have several limitations.
 * Lack of training data especially for roofs with low measured albedo.
-* One of the main challenges in this project was to find a correct method to normalize the imagery from year to year. Our current normalization process has produced much improved result but there are still areas of improvement. 
+* Synthetic training data used to fill gaps in available training data
+* Normalizing the imagery for comparison between years is challenging. Our current normalization process has produced good results but there are still areas of improvement to enable this model to allow for precise tracking of albedo over time. 
+The limitations to the model have implications for the appropriate uses of the results. The results of these models can be used for
+* Comparison of relative albedo values of roofs (if a roof is more or less reflective in relative to others) within a single year
+* Comparison of relative albedo values of roofs (if a roof is more or less reflective in relative to others) within a single year
+* Change in relative albedo of a group of roofs between years 
+The model in its current form should not be used for
+* Precise measurements of the albedo value of a single roof or group of roofs
+* Change in precise albedo values over time.  
 
 ### Future Work:
-* Predictions for additional geographies
+* Predictions for additional geographies and with additional imagery sources
 * Collect more training data
 * Refine scene normalization process
 
+### Project Team:
+Taufiq Rashid, Eric Mackres, Peter Kerins, Brookie Guzder-Williams, Eric Pietraszkiewicz and Emma Stewart (World Resources Institute); Kurt Shickman (Global Cool Cities Alliance)
 
 ### Acknowledgements
 Thanks to support from a 2019 Microsoft AI for Earth grant, Global Cool Cities Alliance (GCCA), City of Los Angeles, George Ban-Weiss from University of Southern California, Sika AG, Federal Highway Administration Albedo Study, James E Alleman and Michael Heitzman.
