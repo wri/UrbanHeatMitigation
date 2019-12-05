@@ -105,6 +105,7 @@ The methods and models presented here have several limitations.
 * Lack of training data especially for roofs with low measured albedo.
 * Synthetic training data used to fill gaps in available training data
 * Normalizing the imagery for comparison between years is challenging. Our current normalization process has produced good results but there are still areas of improvement to enable this model to allow for precise tracking of albedo over time. 
+
 The limitations to the model have implications for the appropriate uses of the results. The results of these models can be used for
 * Comparison of relative albedo values of roofs (if a roof is more or less reflective in relative to others) within a single year
 * Comparison of relative albedo values of roofs (if a roof is more or less reflective in relative to others) within a single year
