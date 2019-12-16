@@ -219,7 +219,6 @@ dependencies:
   - pygments=2.2.0=py35h0f41973_0
   - pygpu=0.7.6=py35h7eb728f_0
   - pylint=1.8.4=py35_0
-  - pyodbc=4.0.24=py35he6710b0_0
   - pyopenssl=18.0.0=py35_0
   - pyparsing=2.2.0=py35h041ed72_1
   - pyproj=1.9.5.1=py35h508ed2a_5
