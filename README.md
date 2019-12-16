@@ -6,6 +6,10 @@ We present an automated workflow to monitor the surface reflectivity of roofs an
 ### Summary:
 This repository contains a comprehensive set of instructions for creating and applying models that estimate surface reflectivity of roofs and streets for different urban areas in the United States using machine learning. Example results for roofs are available for Los Angeles County [Los Angeles County](https://worldresources.maps.arcgis.com/apps/webappviewer/index.html?id=abb41b4ba5504d848d4715eb2537c317/ "Los Angeles County") and [Kansas City metro area](https://worldresources.maps.arcgis.com/apps/webappviewer/index.html?id=4fba84cf6c314c7d9937ed616d7366f4 "Kansas City metro area"). Example results for streets are available for [City of Los Angeles](https://worldresources.maps.arcgis.com/apps/webappviewer/index.html?id=9e026352d94148319272896336fb0035 "City of Los Angeles")
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Taufiq06/UrbanHeatMitigation/master?filepath=https%3A%2F%2Fgithub.com%2FTaufiq06%2FUrbanHeatMitigation%2Fblob%2Fmaster%2Fnotebooks%2FAPI%2Fcore_display_albedo_web_map.ipynb)
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/Taufiq06/UrbanHeatMitigation/master?filepath=https%3A%2F%2Fgithub.com%2FTaufiq06%2FUrbanHeatMitigation%2Fblob%2Fmaster%2Fnotebooks%2FAPI%2Fcore_display_albedo_web_map.ipynb
+
 The workflow is compressed within a set of Jupyter notebooks. The step by step instructions within the notebooks are the best way to understand the whole workflow. The training and prediction of the model is done using Azure Machine Learning Studio.
 
 ### Requirements:
