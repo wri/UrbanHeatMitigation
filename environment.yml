@@ -85,6 +85,7 @@ dependencies:
   - widgetsnbextension=3.2.1=py35_0
   - yaml=0.1.7=had09818_2
   - pip:
+    - nbgitpuller
     - cartopy==0.17.0
     - fiona==1.8.9.post2
     - importlib2==3.5.0.2
