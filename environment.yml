@@ -414,7 +414,6 @@ dependencies:
     - color==0.1
     - colour==0.1.5
     - configparser==3.7.1
-    - cryptography==2.4.2
     - cupy==5.2.0
     - databricks-cli==0.8.4
     - dlib==19.15.0
