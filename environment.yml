@@ -234,7 +234,6 @@ dependencies:
   - pytest-openfiles=0.3.0=py35_0
   - pytest-remotedata=0.2.1=py35_0
   - python=3.5.5=hc3d631a_4
-  - pytorch=1.2.0=py3.5_cuda10.0.130_cudnn7.6.2_0
   - pytz=2018.4=py35_0
   - pywavelets=0.5.2=py35h53ec731_0
   - pyyaml=3.13=py35h470a237_1
