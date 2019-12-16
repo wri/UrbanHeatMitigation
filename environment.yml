@@ -7,7 +7,6 @@ channels:
   - conda-forge
 dependencies:
   - _anaconda_depends=5.2.0=py35_3
-  - _libgcc_mutex=0.1=main
   - _nb_ext_conf=0.4.0=py35_1
   - alabaster=0.7.10=py35h6fb19ab_0
   - anaconda=custom=py35h104c396_0
@@ -123,7 +122,6 @@ dependencies:
   - libffi=3.2.1=hd88cf55_4
   - libgcc-ng=9.1.0=hdf63c60_0
   - libgdal=2.2.2=h804cdde_1
-  - libgfortran=3.0.0=1
   - libgfortran-ng=7.2.0=hdf63c60_3
   - libgpuarray=0.7.6=h14c3975_1003
   - libkml=1.3.0=h4fcabce_1010
