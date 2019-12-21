@@ -114,10 +114,14 @@ We also wanted to get an idea about how roofs with certain albedo values are cha
 
 ![scatter_change_2009-12](https://github.com/wri/UrbanHeatMitigation/blob/master/scatter_change_2009-12.png)
 
-The scatterplot shows that the roofs with low albedo predictions (between 0 and 0.3) were more consistent over time. There was a decrease in predicted albedo from 2009 to 2012 for high albedo roofs.
+Both the boxplot and the scatterplot shows that the roofs with low albedo predictions (between 0 and 0.3) were more consistent over time. There was a decrease in predicted albedo from 2009 to 2012 for high albedo roofs.
 
 ### Sample final output of albedo map
+##### Prediction of mean albedo for every roof/street:
 ![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_output.PNG)
+
+##### ArcGIS Webapp viewer:
+![Sample output](https://github.com/wri/UrbanHeatMitigation/blob/master/sample_webapp_result.png)
 
 ### Uses and Limitations:
 The methods and models presented here have several limitations.
