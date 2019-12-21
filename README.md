@@ -108,7 +108,9 @@ The change in albedo between multiple years is an important factor to check the 
 ![histogram_change_2009-12](https://github.com/wri/UrbanHeatMitigation/blob/master/histogram_change_2009-12.png)
 
 The mean change looks to be approximately 0. One standard deviation is about 0.09. Nearly 75 thousand roofs had no essentially no change over the 3-year time period. 
-We also wanted to get an idea about how roofs with certain albedo values are changing over time. So, we created a scatterplot to see how roofs in each albedo range changed between 2009 and 2012. 
+We also wanted to get an idea about how roofs with certain albedo values are changing over time. So, we created a boxplot and a scatterplot to see how roofs in each albedo range changed between 2009 and 2012. 
+
+![box-plot_change_2009-12](https://github.com/wri/UrbanHeatMitigation/blob/master/box_plot_change_2009-12.png)
 
 ![scatter_change_2009-12](https://github.com/wri/UrbanHeatMitigation/blob/master/scatter_change_2009-12.png)
 
