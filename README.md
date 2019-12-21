@@ -16,7 +16,10 @@ Several parts of the workflow utilize the `descarteslabs` package for imagery re
 #### Training/validation: 
 * measured or known albedo values of specific materials/sites at specific times. We collected roof and pavement albedo measurements from roof manufactures installers and researchers. Currently we have known albedo values associated with specific measurement or installation dates for over 30,000 unique roofs or pavement location in approximately 45 US states. However, most of the roof samples were associated with high albedo values and there were very small number of samples with low albedo values. So, we employed two techniques to cover up the lack of training data: pixel sampling and SMOTE. Rather than using all the pixels within a roof or street, we selected 20 random pixels as input. This gave us the opportunity to select multiple sample of 20 pixels from underrepresented cases. SMOTE (Synthetic Minority Oversampling Technique) is a method in Azure Machine Learning Studio (classic) to increase the number of minority cases in a dataset used for machine learning. This statistical technique helped us to create new samples with a range of albedo values for which we had no data before. Overall, 283 roof samples were used as input for the roofs model and 2294 pavement samples were used as input for the pavement model. The samples were selected in a way to have a more diverse and balanced training data. 
 
+Training data for roof model:
 ![Training data for roof model:](https://github.com/wri/UrbanHeatMitigation/blob/master/train_data_roof_model.png)
+
+Training data for street model:
 ![Training data for street model:](https://github.com/wri/UrbanHeatMitigation/blob/master/train_data_street_model.png)
 
 * geometries of training site/material. Microsoft footprint data was used as the main source of geometries for the roofs training data. For pavement, Google Direction API was used to get the centerline of the streets. The centerline was then buffered 2m in each side to get the geometry of the streets.
