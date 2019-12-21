@@ -71,12 +71,15 @@ Validation score for the model: Before training, the data was split into a 70:30
 ##### Validation accuracy curve for roof model:
 ![Validation accuracy curve for roof model:](https://github.com/wri/UrbanHeatMitigation/blob/master/valid_curve_roof_model.png)
 
-##### Validation accuracy curve for roof model:
+##### Validation accuracy curve for street model:
 ![Validation accuracy curve for street model:](https://github.com/wri/UrbanHeatMitigation/blob/master/valid_curve_street_model.png)
 
 Average precision scores: For buildings present in multiple images we were able to produce multiple predictions. The duplicate predictions were used to estimate the precision error of the albedo values. The scores from multiple years were averaged to get an overall precision score.
-* mean absolute error from duplicate predictions: 0.0034
-* root mean squared error from duplicate predictions: 0.0322
+* mean absolute error from duplicate predictions: 0.04202
+* root mean squared error from duplicate predictions: 0.0995
+
+##### Precision score for multiple years:
+![Precision score for multiple years:](https://github.com/wri/UrbanHeatMitigation/blob/master/precision_score_roof_models.png)
 
 #### Comparison to Ban-Weiss prediction:
 Visual comparison:
