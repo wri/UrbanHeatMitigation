@@ -125,7 +125,7 @@ Both the boxplot and the scatterplot shows that the roofs with low albedo predic
 
 ### Uses and Limitations:
 The methods and models presented here have several limitations.
-* Lack of training data especially for roofs with low measured albedo.
+* Lack of training data especially for roofs with low measured albedo
 * Synthetic training data used to fill gaps in available training data
 * Normalizing the imagery for comparison between years is challenging. Our current normalization process has produced good results but there are still areas of improvement to enable this model to allow for precise tracking of albedo over time. 
 
