@@ -133,6 +133,7 @@ The limitations to the model have implications for the appropriate uses of the r
 * Comparison of relative albedo values of roofs (if a roof is more or less reflective in relative to others) within a single year
 * Comparison of relative albedo values of roofs (if a roof is more or less reflective in relative to others) within a single year
 * Change in relative albedo of a group of roofs between years 
+
 The model in its current form should not be used for
 * Precise measurements of the albedo value of a single roof or group of roofs
 * Change in precise albedo values over time.  
